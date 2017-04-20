@@ -15,8 +15,11 @@ import java.io.File;
 import java.util.List;
 
 /**
+ * Main and unique class on the plugin.
+ * Implements Listener and CommandExecutor.
+ *
  * @author Flayyy
- * @since 1.11.2-R0.1
+ * @version 1.0.0
  */
 public class OnJoinCommands extends JavaPlugin implements Listener, CommandExecutor {
     @Override
