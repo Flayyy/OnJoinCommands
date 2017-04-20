@@ -1,0 +1,9 @@
+name: OnJoinCommands
+version: 1.0.0
+description: Provide a simple way to run commands when user join the server
+author: Flayyy
+main: fr.flayyy.onjoincommands.OnJoinCommands
+commands:
+  ojcreload:
+    description: Reload the OnJoinCommand configuration
+    permission: ojc.reload
