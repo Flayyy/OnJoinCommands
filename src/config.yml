@@ -1,14 +1,16 @@
 # OnJoinCommands configuration file
 # Simply fill the entries with the desired commands (without the slash /)
 #
-# Example
+# The syntax is the following
 # join:
-#   - say Hello # Each time a player join the server, will run the command /say Hello
+#   - command1 # TWO spaces before the dash (-)
+#   - command2
+#   - command3 etc.
+#
+# NB: Commands will be ran from the top to the bottom
 #
 # There are also some aliases available :
 # - %player% the player name
 # - %world% the player's world
 join:
-  - say Hello
 quit:
-  - say Goodbye

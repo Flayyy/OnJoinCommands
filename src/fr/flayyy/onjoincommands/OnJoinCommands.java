@@ -19,7 +19,7 @@ import java.util.List;
  * Implements Listener and CommandExecutor.
  *
  * @author Flayyy
- * @version 1.0.0
+ * @version 1.0.1
  */
 public class OnJoinCommands extends JavaPlugin implements Listener, CommandExecutor {
     @Override
@@ -27,14 +27,15 @@ public class OnJoinCommands extends JavaPlugin implements Listener, CommandExecu
         // Register and load configuration file
         if (!getDataFolder().exists()) {
             getLogger().info("Creating OnJoinCommands folder");
-            if (!getDataFolder().mkdirs()) {
-                getLogger().warning("Unable to create OnJoinCommand folder");
-            } else {
+            if (getDataFolder().mkdirs()) {
                 getLogger().info("Successfully created");
+            } else {
+                getLogger().warning("Unable to create OnJoinCommand folder");
             }
         }
 
         File file = new File(getDataFolder(), "config.yml");
+
         if (!file.exists()) {
             getLogger().info("config.yml was not found, creating!");
             saveDefaultConfig();
